@@ -1,13 +1,13 @@
-package rizomus.T1KonsaltingTest;
+package rizomus.T1KonsaltingTask;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class T1KonsaltingTestApplication {
+public class T1KonsaltingTaskApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(T1KonsaltingTestApplication.class, args);
+		SpringApplication.run(T1KonsaltingTaskApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package rizomus.T1KonsaltingTest.Controller;
+package rizomus.T1KonsaltingTask.Controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +9,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
 @SpringBootTest()
@@ -28,6 +29,7 @@ public class CharFrquencyControllerTest {
                         .contentType(MediaType.TEXT_PLAIN)
                         .content("aaa bb c"))
 //                .andDo(MockMvcResultHandlers.print())
+                .andExpect(status().isOk())
                 .andExpect(content().string("'a':3, ' ':2, 'b':2, 'c':1."));
 
 
